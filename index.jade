@@ -8,6 +8,8 @@ html
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="viewport", content="width=device-width")
 
+    link(href="http://fonts.googleapis.com/css?family=Mouse+Memoirs", rel="stylesheet", type="text/css")
+    link(href="http://fonts.googleapis.com/css?family=Archivo+Narrow", rel="stylesheet", type="text/css")
     link(rel="stylesheet", href="assets/stylesheets/normalize.css")
     link(rel="stylesheet", href="assets/stylesheets/main.css?v=0.1")
 
@@ -19,34 +21,79 @@ html
 
       h1 Sassy Buttons!!
 
-      h3 Anchors
+      p
+        | *Under Construction* Explain the GitHub repo here
 
-      p
-        a.btn Regular Button
-      p
-        a.btn.btn--primary.btn--block Block Level Primary Button
-      p
-        a.btn.btn--danger Danger! Button
-      p
-        a.btn.btn--success Success Button
-      p
-        a.btn.btn--danger.btn--small Small Danger! Button
-      p
-        a.btn.btn--success.btn--large Large Success Button
-      p
-        a.btn.btn--subtle Subtle Button
+      a.btn.btn--primary.btn--block(href="#", title="View this project on GitHub") View Sassy Buttons on GitHub
 
-      h3 Button Elements
+      h2 Basic Buttons
 
-      p
-        button.btn Regular Button
-      p
-        button.btn.btn--primary.btn--block Block Level Primary Button
-      p
-        button.btn.btn--danger Danger! Button
-      p
-        button.btn.btn--success Success Button
-      p
-        button.btn.btn--danger.btn--small Small Danger! Button
-      p
-        button.btn.btn--success.btn--large Large Success Button
+      dl
+        dt
+          button.btn Button
+        dd
+          pre &lt;button class="btn"&gt;Button&lt;button&gt;
+
+      dl
+        dt
+          button.btn.btn--primary Primary Button
+        dd
+          pre class="btn btn--primary"
+
+      dl
+        dt
+          button.btn.btn--danger Danger! Button
+        dd
+          pre class="btn btn--danger"
+
+      dl
+        dt
+          button.btn.btn--success Success Button
+        dd
+          pre class="btn btn--success"
+
+      dl
+        dt
+          button.btn.btn--subtle Subtle Button
+        dd
+          pre class="btn btn--subtle"
+
+      h2 Variations
+
+      dl
+        dt
+          button.btn.btn--danger.btn--small Small Danger! Button
+        dd
+          pre class="btn btn--danger btn--small"
+
+      dl
+        dt
+          button.btn.btn--success.btn--large Large Success Button :D
+        dd
+          pre class="btn btn--success btn--large"
+
+      dl
+        dt
+          button.btn.btn--primary.btn--block Block Level Primary Button
+        dd
+          pre class="btn btn--primary btn--block"
+
+      dl
+        dt
+          a.btn.btn--primary An anchor styled like a button
+        dd
+          pre &lt;a href="#" class="btn btn--primary btn--block"&gt;
+
+      dl
+        dt
+          button.btn.btn--hotstuff Hot Stuff!
+        dd
+          pre .btn--hotstuff
+
+      dl
+        dt
+          button.btn.btn--primary Confirm
+          button.btn.btn--subtle Cancel
+          button.btn.btn--success Save
+          button.btn.btn--danger Delete
+        dd

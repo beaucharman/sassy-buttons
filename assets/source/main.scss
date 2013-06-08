@@ -11,13 +11,105 @@
 // For useful mixins: http://getpreboot.com/
 // ======================================================================== /
 
+// Rhythm
+// ========================================================================
+// rhythm()
+// @version 1.0 | April 25th 2013
+// @author  Beau Charman | @beaucharman | http://www.beaucharman.me
+// @link    https://gist.github.com/beaucharman/5459188/
+// @param  {em}    $fontsize   | em unit value
+// @param  {float} $lineheight | float value
+// @return {em}    em unit value
+// ======================================================================== //
+@function rhythm($fontsize, $lineheight: 1.4) {
+  @return ($lineheight + 0em) / $fontsize + 0em;
+}
+
+// Headings
+// ======================================================================== /
+$h1--font-size:                 4em; // h1, alpha
+$h2--font-size:                 2.8em; // h2, beta
+$h3--font-size:                 2.2em; // h3, gamma
+$h4--font-size:                 1.8em; // h4, delta
+$h5--font-size:                 1.4em; // h5, epsilon
+$h6--font-size:                 1em;   // h6, zeta
+
 @import 'bourbon/bourbon';
 @import '../../sassy-buttons';
 
 // General styling for demo
 // ======================================================================== /
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: desaturate(purple, 70%);
+}
+
+/**
+ * Various headings and size alias.
+ */
+$headings:
+  h1 $h1--font-size alpha,
+  h2 $h2--font-size beta,
+  h3 $h3--font-size gamma,
+  h4 $h4--font-size delta,
+  h5 $h5--font-size epsilon,
+  h6 $h6--font-size zeta;
+
+/**
+ * Heading, and size alias vertical rhythm declaration.
+ */
+@each $heading in $headings {
+
+  #{nth($heading, 1)},
+  .#{nth($heading, 3)} {
+    font-size: #{nth($heading, 2)};
+    margin: rhythm(nth($heading, 2)) 0;
+  }
+
+  .#{nth($heading, 1)}--raise,
+  .#{nth($heading, 3)}--raise {
+    margin-top: rhythm(-(nth($heading, 2)));
+  }
+
+  .#{nth($heading, 1)}--drop,
+  .#{nth($heading, 3)}--drop {
+    margin-bottom: rhythm(-(nth($heading, 2)));
+  }
+}
+
+/**
+ * Styles that apply to all headings for consistency.
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Mouse Memoirs', serif;
+  line-height: 1.4;
+}
+
 .page-wrap {
   max-width: 520px;
   margin: 0 auto;
   padding: 1.5em;
+}
+
+dl {
+  margin: 1.5em 0;
+  dt {
+
+  }
+  dd {
+    margin: 0.5em 0;
+    padding: 0;
+  }
+}
+
+pre {
+  padding: 6px 10px;
+  margin: 0;
+  color: #d7d2bc;
+  line-height: 1.4;
+  border-radius: 3px;
+  border: 1px solid #afa9da;
+  background-color: #2d2d2d;
 }
