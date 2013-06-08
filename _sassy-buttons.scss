@@ -60,7 +60,6 @@ $buttons:
 
 .btn--block {
   display: block;
-  width: 100%;
 }
 
 @each $button in $buttons {
@@ -73,7 +72,7 @@ $buttons:
   // Initial state
   #{$selector} {
     background-color: nth($button, 2);
-    background-image: -webkit-linear-gradient(top, lighten(nth($button, 2), 15%), nth($button, 2));
+    background-image: -webkit-linear-gradient(top, lighten(nth($button, 2), 12%), nth($button, 2));
     border: 1px solid;
     border-color: darken(nth($button, 2), 1%);
     border-bottom-color: darken(nth($button, 2), 10%);
@@ -84,21 +83,20 @@ $buttons:
       text-shadow: 0 -1px 0 darken(nth($button, 2), 2%);
       color: #fff;
     }
-
   }
 
   // Hover state
   #{$selector}:hover {
-    background-color: lighten(nth($button, 2), 10%);
-    background-image: -webkit-linear-gradient(top, lighten(nth($button, 2), 20%), lighten(nth($button, 2), 10%));
+    background-color: lighten(nth($button, 2), 8%);
+    background-image: -webkit-linear-gradient(top, lighten(nth($button, 2), 18%), lighten(nth($button, 2), 8%));
     color: darken(nth($button, 3), 3%);
     border-color: darken(nth($button, 2), 8%);
   }
 
   // Active state
   #{$selector}:active {
-    background-color: darken(nth($button, 2), 2%);
-    background-image: -webkit-linear-gradient(top, darken(nth($button, 2), 4%), darken(nth($button, 2), 2%));
+    background-color: darken(nth($button, 2), 1%);
+    background-image: -webkit-linear-gradient(top, darken(nth($button, 2), 3%), darken(nth($button, 2), 1%));
   }
 
   #{$selector}--inactive {
