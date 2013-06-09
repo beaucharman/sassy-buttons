@@ -31,6 +31,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie_hex_str($startColor)}', endColorstr='#{ie_hex_str($endColor)}', GradientType=0); // IE9 and down
 }
 
+%border-box-sizing {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 // Sassy Button
 // ========================================================================
 // sassy-button() Sass mixin
@@ -41,7 +47,7 @@
 // @param {boolean} $high-contrast | use true or false
 // Dependancies: gradient-vertical()
 // ======================================================================== /
-@mixin sassy-button($handle: subtle, $background-color: #ccc, $color: #444, $inverted: false, $high-contrast: false) {
+@mixin sassy-button($handle: subtle, $background-color: #ccc, $foreground-color: #444, $inverted: false, $high-contrast: false) {
 
   //
   // Set up selectors for each button
@@ -77,10 +83,10 @@
     @if($high-contrast == true) {
       text-shadow: none;
       color: darken($background-color, 3%);
-      border-color: darken($color, 8%);
-      @include gradient-vertical(lighten($color, 18%), lighten($color, 8%));
+      border-color: darken($foreground-color, 8%);
+      @include gradient-vertical(lighten($foreground-color, 18%), lighten($foreground-color, 8%));
     } @else {
-      color: darken($color, 3%);
+      color: darken($foreground-color, 3%);
       border-color: darken($background-color, 8%);
       @include gradient-vertical(lighten($background-color, 18%), lighten($background-color, 8%));
     }
@@ -91,7 +97,7 @@
   //
   #{$selector}:active {
     @if($high-contrast == true) {
-      @include gradient-vertical(darken($color, 15%), darken($color, 13%));
+      @include gradient-vertical(darken($foreground-color, 15%), darken($foreground-color, 13%));
     } @else {
       @include gradient-vertical(darken($background-color, 3%), darken($background-color, 1%));
     }
@@ -123,6 +129,7 @@
   border-radius: 3px;
   line-height: 1.4;
   text-decoration: none;
+  @extend %border-box-sizing;
 }
 
 .btn:active {

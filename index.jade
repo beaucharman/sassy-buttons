@@ -9,7 +9,6 @@ html
     meta(name="viewport", content="width=device-width")
 
     link(href="http://fonts.googleapis.com/css?family=Mouse+Memoirs", rel="stylesheet", type="text/css")
-    link(href="http://fonts.googleapis.com/css?family=Archivo+Narrow", rel="stylesheet", type="text/css")
     link(rel="stylesheet", href="assets/stylesheets/normalize.css")
     link(rel="stylesheet", href="assets/stylesheets/main.css?v=0.1")
 
@@ -24,7 +23,20 @@ html
         h1 Sassy Buttons!!
 
         p
-          | *Under Construction* Explain the GitHub repo here
+          | Some styles and functions to help quickly create nice buttons, with Sass ;)
+
+        p
+          | To create some buttons, conduct the following tasks.
+
+        ol
+          li Download and import &nbsp;
+            code _sassy-buttons.scss
+            |&nbsp;into your main Sass directory.
+          li Use the&nbsp;
+            code sassy-button()
+            |&nbsp;mixin to render the CSS necessary for each button style. For example:
+            pre @include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);
+          li Make, and enjoy a pot of tea.
 
         p
           a.btn.btn--primary.btn--block(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") View Sassy Buttons on GitHub
@@ -118,27 +130,24 @@ html
 
             pre @include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);
 
-      section
-
-        h2 IRL Example
-
-        dl
-          dt
-            button.btn.btn--primary Confirm
-            button.btn.btn--subtle Cancel
-            button.btn.btn--success Save
-            button.btn.btn--danger Delete
-          dd
-
       p
         | Thank you for stopping by :)&nbsp;
         a.btn.btn--small(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") For this repo here &rarr;
 
       footer.page-footer
         p
-          | Sassy Buttons are made with love by&nbsp;
+          a(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") Sassy Buttons
+          |&nbsp;is made with love by&nbsp;
           a(href="https://www.twitter.com/beaucharman", title="Beau on Twitter") Beau Charman
-          | , and are&nbsp;
+          |, and is&nbsp;
           a(href="http://opensource.org/licenses/MIT", title="MIT license") MIT licenesed.
-          |&nbsp;This page was built with Sass and Jade. Hosted on GitHub. Fonts via Google Fonts.
+          |&nbsp;This page was built with&nbsp;
+          a(href="http://sass-lang.com/", title="Sass") Sass
+          |&nbsp;and&nbsp;
+          a(href="https://github.com/visionmedia/jade", title="Jade") Jade
+          |. Hosted on&nbsp;
+          a(href="https://www.github.com", title="GitHub") GitHub
+          |. Fonts via&nbsp;
+          a(href="http://www.google.com/fonts/specimen/Mouse+Memoirs", title="Google Fonts") Google Fonts
+          |.
 

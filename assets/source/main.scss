@@ -25,14 +25,25 @@
   @return ($lineheight + 0em) / $fontsize + 0em;
 }
 
+// Breakpoints
+// ========================================================================
+// Thank you http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+// ======================================================================== /
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) { @content; }
+}
+
 // Headings
 // ======================================================================== /
-$h1--font-size:                 4em; // h1, alpha
-$h2--font-size:                 2.8em; // h2, beta
-$h3--font-size:                 2.2em; // h3, gamma
-$h4--font-size:                 1.8em; // h4, delta
-$h5--font-size:                 1.4em; // h5, epsilon
-$h6--font-size:                 1em;   // h6, zeta
+$h1--font-size: 6em; // h1, alpha
+$h2--font-size: 3.8em; // h2, beta
+$h3--font-size: 3.2em; // h3, gamma
+$h4--font-size: 2.8em; // h4, delta
+$h5--font-size: 2.4em; // h5, epsilon
+$h6--font-size: 1.8em;   // h6, zeta
+
+$narrow: 520px;
+$medium: 780px;
 
 @import 'bourbon/bourbon';
 @import '../../sassy-buttons';
@@ -40,9 +51,16 @@ $h6--font-size:                 1em;   // h6, zeta
 // General styling for demo
 // ======================================================================== /
 body {
-  font-size: 18px;
+  font-size: 16px;
+  @include breakpoint($narrow) {
+    font-size: 18px;
+  }
+  @include breakpoint($medium) {
+    font-size: 20px;
+  }
   line-height: 1.6;
   color: #fff;
+  font-weight: 200;
   background-color: desaturate(purple, 70%);
   border-top: 5px dashed #fff;
 }
@@ -85,11 +103,11 @@ $headings:
  */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Mouse Memoirs', serif;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .page-wrap {
-  max-width: 520px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 1.5em;
 }
@@ -145,7 +163,7 @@ footer {
 
 pre {
   padding: 6px 10px;
-  margin: 0.5em 0;
+  margin: 1.5em 0;
   color: #d7d2bc;
   line-height: 1.4;
   border-radius: 3px;
@@ -153,5 +171,11 @@ pre {
   background-color: #2d2d2d;
   strong {
     color: #fff;
+  }
+}
+
+dd {
+  pre {
+    margin: 0.5em 0;
   }
 }

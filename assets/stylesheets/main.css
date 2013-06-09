@@ -1,4 +1,9 @@
 .btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.btn {
   background-image: none;
   background-color: transparent;
   border: 1px solid;
@@ -76,11 +81,18 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFCCCCCC', GradientType=0); }
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   color: #fff;
+  font-weight: 200;
   background-color: #532d53;
   border-top: 5px dashed #fff; }
+  @media screen and (min-width: 520px) {
+    body {
+      font-size: 18px; } }
+  @media screen and (min-width: 780px) {
+    body {
+      font-size: 20px; } }
 
 /**
  * Various headings and size alias.
@@ -90,91 +102,91 @@ body {
  */
 h1,
 .alpha {
-  font-size: 4em;
-  margin: 0.35em 0; }
+  font-size: 6em;
+  margin: 0.23333em 0; }
 
 .h1--raise,
 .alpha--raise {
-  margin-top: -0.35em; }
+  margin-top: -0.23333em; }
 
 .h1--drop,
 .alpha--drop {
-  margin-bottom: -0.35em; }
+  margin-bottom: -0.23333em; }
 
 h2,
 .beta {
-  font-size: 2.8em;
-  margin: 0.5em 0; }
+  font-size: 3.8em;
+  margin: 0.36842em 0; }
 
 .h2--raise,
 .beta--raise {
-  margin-top: -0.5em; }
+  margin-top: -0.36842em; }
 
 .h2--drop,
 .beta--drop {
-  margin-bottom: -0.5em; }
+  margin-bottom: -0.36842em; }
 
 h3,
 .gamma {
-  font-size: 2.2em;
-  margin: 0.63636em 0; }
+  font-size: 3.2em;
+  margin: 0.4375em 0; }
 
 .h3--raise,
 .gamma--raise {
-  margin-top: -0.63636em; }
+  margin-top: -0.4375em; }
 
 .h3--drop,
 .gamma--drop {
-  margin-bottom: -0.63636em; }
+  margin-bottom: -0.4375em; }
 
 h4,
 .delta {
-  font-size: 1.8em;
-  margin: 0.77778em 0; }
+  font-size: 2.8em;
+  margin: 0.5em 0; }
 
 .h4--raise,
 .delta--raise {
-  margin-top: -0.77778em; }
+  margin-top: -0.5em; }
 
 .h4--drop,
 .delta--drop {
-  margin-bottom: -0.77778em; }
+  margin-bottom: -0.5em; }
 
 h5,
 .epsilon {
-  font-size: 1.4em;
-  margin: 1em 0; }
+  font-size: 2.4em;
+  margin: 0.58333em 0; }
 
 .h5--raise,
 .epsilon--raise {
-  margin-top: -1em; }
+  margin-top: -0.58333em; }
 
 .h5--drop,
 .epsilon--drop {
-  margin-bottom: -1em; }
+  margin-bottom: -0.58333em; }
 
 h6,
 .zeta {
-  font-size: 1em;
-  margin: 1.4em 0; }
+  font-size: 1.8em;
+  margin: 0.77778em 0; }
 
 .h6--raise,
 .zeta--raise {
-  margin-top: -1.4em; }
+  margin-top: -0.77778em; }
 
 .h6--drop,
 .zeta--drop {
-  margin-bottom: -1.4em; }
+  margin-bottom: -0.77778em; }
 
 /**
  * Styles that apply to all headings for consistency.
  */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Mouse Memoirs', serif;
-  line-height: 1.4; }
+  line-height: 1.2; }
 
 .page-wrap {
-  max-width: 520px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 1.5em; }
 
@@ -528,7 +540,7 @@ footer {
 
 pre {
   padding: 6px 10px;
-  margin: 0.5em 0;
+  margin: 1.5em 0;
   color: #d7d2bc;
   line-height: 1.4;
   border-radius: 3px;
@@ -536,3 +548,6 @@ pre {
   background-color: #2d2d2d; }
   pre strong {
     color: #fff; }
+
+dd pre {
+  margin: 0.5em 0; }

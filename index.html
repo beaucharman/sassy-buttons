@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <link href="http://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/stylesheets/normalize.css">
     <link rel="stylesheet" href="assets/stylesheets/main.css?v=0.1"><!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -15,7 +14,15 @@
     <div class="page-wrap">
       <header class="page-header">
         <h1>Sassy Buttons!!</h1>
-        <p>*Under Construction* Explain the GitHub repo here</p>
+        <p>Some styles and functions to help quickly create nice buttons, with Sass ;)</p>
+        <p>To create some buttons, conduct the following tasks.</p>
+        <ol>
+          <li>Download and import &nbsp;<code>_sassy-buttons.scss</code>&nbsp;into your main Sass directory.</li>
+          <li>Use the&nbsp;<code>sassy-button()</code>&nbsp;mixin to render the CSS necessary for each button style. For example:
+            <pre>@include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);</pre>
+          </li>
+          <li>Make, and enjoy a pot of tea.</li>
+        </ol>
         <p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--primary btn--block">View Sassy Buttons on GitHub</a></p>
       </header>
       <section>
@@ -126,21 +133,9 @@
           </dd>
         </dl>
       </section>
-      <section>
-        <h2>IRL Example</h2>
-        <dl>
-          <dt>
-            <button class="btn btn--primary">Confirm</button>
-            <button class="btn btn--subtle">Cancel</button>
-            <button class="btn btn--success">Save</button>
-            <button class="btn btn--danger">Delete</button>
-          </dt>
-          <dd></dd>
-        </dl>
-      </section>
       <p>Thank you for stopping by :)&nbsp;<a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--small">For this repo here &rarr;</a></p>
       <footer class="page-footer">
-        <p>Sassy Buttons are made with love by&nbsp;<a href="https://www.twitter.com/beaucharman" title="Beau on Twitter">Beau Charman</a>, and are&nbsp;<a href="http://opensource.org/licenses/MIT" title="MIT license">MIT licenesed.</a>&nbsp;This page was built with Sass and Jade. Hosted on GitHub. Fonts via Google Fonts.</p>
+        <p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub">Sassy Buttons</a>&nbsp;is made with love by&nbsp;<a href="https://www.twitter.com/beaucharman" title="Beau on Twitter">Beau Charman</a>, and is&nbsp;<a href="http://opensource.org/licenses/MIT" title="MIT license">MIT licenesed.</a>&nbsp;This page was built with&nbsp;<a href="http://sass-lang.com/" title="Sass">Sass</a>&nbsp;and&nbsp;<a href="https://github.com/visionmedia/jade" title="Jade">Jade</a>. Hosted on&nbsp;<a href="https://www.github.com" title="GitHub">GitHub</a>. Fonts via&nbsp;<a href="http://www.google.com/fonts/specimen/Mouse+Memoirs" title="Google Fonts">Google Fonts</a>.</p>
       </footer>
     </div>
   </body>
