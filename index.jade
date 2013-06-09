@@ -21,9 +21,14 @@ html
       header.page-header
 
         h1 Sassy Buttons!!
+        h6 A thing by&nbsp;
+          a(href="https://twitter.com/beaucharman", title="Beau on Twitter")@beaucharman
 
         p
           | Some clean styles and thoughtful Sass mixins that create sexy and semantic CSS button objects.
+
+        p
+          a.btn.btn--primary.btn--block(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") View Sassy Buttons on GitHub
 
         p
           | To create some button objects, conduct the following tasks:
@@ -36,10 +41,10 @@ html
             code sassy-button()
             |&nbsp;mixin to render the CSS necessary for each button style. For example:
             pre @include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);
-          li Make, and enjoy a pot of tea.
+            |&nbsp;Which could look something like:
+            pre @include sassy-button(primary, #6981c5, #fff, false, false);
 
-        p
-          a.btn.btn--primary.btn--block(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") View Sassy Buttons on GitHub
+          li Make, and enjoy a pot of tea.
 
       section
 
@@ -93,6 +98,12 @@ html
 
         dl
           dt
+            button.btn.btn--narrow Narrow button
+          dd
+            pre class="btn btn--narrow"
+
+        dl
+          dt
             button.btn.btn--primary.btn--block Block Level Primary Button
           dd
             pre class="btn btn--primary btn--block"
@@ -127,12 +138,11 @@ html
             button.btn.btn--high-contrast High contrast user feedback
           dd
             pre .btn.btn--high-contrast
-
             pre @include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);
 
       p
         | Thank you for stopping by :)&nbsp;
-        a.btn.btn--small(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") For this repo here &rarr;
+        a.btn.btn--small(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") View this project on github &rarr;
 
       footer.page-footer
         p
@@ -150,4 +160,3 @@ html
           |. Fonts via&nbsp;
           a(href="http://www.google.com/fonts/specimen/Mouse+Memoirs", title="Google Fonts") Google Fonts
           |.
-

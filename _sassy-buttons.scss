@@ -64,15 +64,14 @@
   // Initial state
   //
   #{$selector} {
+    color: $foreground-color;
     border-color: darken($background-color, 1%);
     border-bottom-color: darken($background-color, 10%);
     @include gradient-vertical(lighten($background-color, 12%), $background-color);
     @if($inverted == true) {
       text-shadow: 0 1px 0 lighten($background-color, 18%);
-      color: #333;
     } @else {
       text-shadow: 0 -1px 0 darken($background-color, 4%);
-      color: #fff;
     }
   }
 
@@ -113,6 +112,8 @@
 
 // Styles
 // ======================================================================== /
+
+// Base styling
 .btn {
   background-image: none;
   background-color: transparent;
@@ -132,6 +133,7 @@
   @extend %border-box-sizing;
 }
 
+// Various states and apparences
 .btn:active {
   box-shadow: inset 0 1px 8px -2px #000;
   text-shadow: 0 0 8px #fff !important;
@@ -145,10 +147,15 @@
   font-size: 0.75em;
 }
 
+.btn--narrow {
+  padding: 0.15em 0.75em;
+}
+
 .btn--block {
   width: 100%;
   display: block;
 }
 
-// Set up the initial default
+// Set up the initial
+// default button object
 @include sassy-button();
