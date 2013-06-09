@@ -13,98 +13,135 @@
   </head>
   <body>
     <div class="page-wrap">
-      <h1>Sassy Buttons!!</h1>
-      <p>*Under Construction* Explain the GitHub repo here</p>
-      <p><a href="#" title="View this project on GitHub" class="btn btn--primary btn--block">View Sassy Buttons on GitHub</a></p>
-      <h2>Basic Buttons</h2>
-      <dl>
-        <dt>
-          <button class="btn">Button</button>
-        </dt>
-        <dd>
-          <pre>&lt;button class="btn"&gt;Button&lt;button&gt;</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--primary">Primary Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--primary"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--danger">Danger! Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--danger"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--success">Success Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--success"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--subtle">Subtle Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--subtle"</pre>
-        </dd>
-      </dl>
-      <h2>Variations</h2>
-      <dl>
-        <dt>
-          <button class="btn btn--danger btn--small">Small Danger! Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--danger btn--small"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--success btn--large">Large Success Button :D</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--success btn--large"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--primary btn--block">Block Level Primary Button</button>
-        </dt>
-        <dd>
-          <pre>class="btn btn--primary btn--block"</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt><a class="btn btn--primary">An anchor styled like a button</a></dt>
-        <dd>
-          <pre>&lt;a href="#" class="btn btn--primary btn--block"&gt;</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--hotstuff">Hot Stuff!</button>
-        </dt>
-        <dd>
-          <pre>.btn--hotstuff</pre>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-          <button class="btn btn--primary">Confirm</button>
-          <button class="btn btn--subtle">Cancel</button>
-          <button class="btn btn--success">Save</button>
-          <button class="btn btn--danger">Delete</button>
-        </dt>
-        <dd></dd>
-      </dl>
+      <header class="page-header">
+        <h1>Sassy Buttons!!</h1>
+        <p>*Under Construction* Explain the GitHub repo here</p>
+        <p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--primary btn--block">View Sassy Buttons on GitHub</a></p>
+      </header>
+      <section>
+        <h2>Basic Buttons</h2>
+        <dl>
+          <dt>
+            <button class="btn">Button</button>
+          </dt>
+          <dd>
+            <pre>&lt;button class="btn"&gt;Button&lt;button&gt;</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--primary">Primary Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--primary"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--danger">Danger! Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--danger"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--success">Success Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--success"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--noir">Noir Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--noir"</pre>
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Variations</h2>
+        <dl>
+          <dt>
+            <button class="btn btn--danger btn--small">Small Danger! Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--danger btn--small"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--success btn--large">Large Success Button :D</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--success btn--large"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--primary btn--block">Block Level Primary Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--primary btn--block"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt><a class="btn">An anchor styled like a button</a></dt>
+          <dd>
+            <pre>&lt;a href="#" class="btn"&gt;</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--custom-color">Custom colours!</button>
+          </dt>
+          <dd>
+            <pre>.btn.btn--custom-color</pre>
+            <pre>@include sassy-button(custom-color, #6fb49d, #fff);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--inverted">Inverted colours</button>
+            <p>
+              Dark text on a light background,
+              so we alter the text-shadow color and direction
+              to stay consistent with the light source (top to bottom)
+            </p>
+          </dt>
+          <dd>
+            <pre>.btn.btn--inverted</pre>
+            <pre>@include sassy-button(inverted, #a2c2f9, #000, <strong>true</strong>);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--high-contrast">High contrast user feedback</button>
+          </dt>
+          <dd>
+            <pre>.btn.btn--high-contrast</pre>
+            <pre>@include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);</pre>
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>IRL Example</h2>
+        <dl>
+          <dt>
+            <button class="btn btn--primary">Confirm</button>
+            <button class="btn btn--subtle">Cancel</button>
+            <button class="btn btn--success">Save</button>
+            <button class="btn btn--danger">Delete</button>
+          </dt>
+          <dd></dd>
+        </dl>
+      </section>
+      <p>Thank you for stopping by :)&nbsp;<a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--small">For this repo here &rarr;</a></p>
+      <footer class="page-footer">
+        <p>Sassy Buttons are made with love by&nbsp;<a href="https://www.twitter.com/beaucharman" title="Beau on Twitter">Beau Charman</a>, and are&nbsp;<a href="http://opensource.org/licenses/MIT" title="MIT license">MIT licenesed.</a>&nbsp;This page was built with Sass and Jade. Hosted on GitHub. Fonts via Google Fonts.</p>
+      </footer>
     </div>
   </body>
 </html>

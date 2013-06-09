@@ -19,82 +19,126 @@ html
   body
     .page-wrap
 
-      h1 Sassy Buttons!!
+      header.page-header
+
+        h1 Sassy Buttons!!
+
+        p
+          | *Under Construction* Explain the GitHub repo here
+
+        p
+          a.btn.btn--primary.btn--block(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") View Sassy Buttons on GitHub
+
+      section
+
+        h2 Basic Buttons
+
+        dl
+          dt
+            button.btn Button
+          dd
+            pre &lt;button class="btn"&gt;Button&lt;button&gt;
+
+        dl
+          dt
+            button.btn.btn--primary Primary Button
+          dd
+            pre class="btn btn--primary"
+
+        dl
+          dt
+            button.btn.btn--danger Danger! Button
+          dd
+            pre class="btn btn--danger"
+
+        dl
+          dt
+            button.btn.btn--success Success Button
+          dd
+            pre class="btn btn--success"
+
+        dl
+          dt
+            button.btn.btn--noir Noir Button
+          dd
+            pre class="btn btn--noir"
+
+      section
+
+        h2 Variations
+
+        dl
+          dt
+            button.btn.btn--danger.btn--small Small Danger! Button
+          dd
+            pre class="btn btn--danger btn--small"
+
+        dl
+          dt
+            button.btn.btn--success.btn--large Large Success Button :D
+          dd
+            pre class="btn btn--success btn--large"
+
+        dl
+          dt
+            button.btn.btn--primary.btn--block Block Level Primary Button
+          dd
+            pre class="btn btn--primary btn--block"
+
+        dl
+          dt
+            a.btn An anchor styled like a button
+          dd
+            pre &lt;a href="#" class="btn"&gt;
+
+        dl
+          dt
+            button.btn.btn--custom-color Custom colours!
+          dd
+            pre .btn.btn--custom-color
+
+            pre @include sassy-button(custom-color, #6fb49d, #fff);
+
+        dl
+          dt
+            button.btn.btn--inverted Inverted colours
+            p
+              | Dark text on a light background,
+              | so we alter the text-shadow color and direction
+              | to stay consistent with the light source (top to bottom)
+          dd
+            pre .btn.btn--inverted
+            pre @include sassy-button(inverted, #a2c2f9, #000, <strong>true</strong>);
+
+        dl
+          dt
+            button.btn.btn--high-contrast High contrast user feedback
+          dd
+            pre .btn.btn--high-contrast
+
+            pre @include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);
+
+      section
+
+        h2 IRL Example
+
+        dl
+          dt
+            button.btn.btn--primary Confirm
+            button.btn.btn--subtle Cancel
+            button.btn.btn--success Save
+            button.btn.btn--danger Delete
+          dd
 
       p
-        | *Under Construction* Explain the GitHub repo here
+        | Thank you for stopping by :)&nbsp;
+        a.btn.btn--small(href="https://github.com/beaucharman/sassy-buttons", title="View this project on GitHub") For this repo here &rarr;
 
-      p
-        a.btn.btn--primary.btn--block(href="#", title="View this project on GitHub") View Sassy Buttons on GitHub
+      footer.page-footer
+        p
+          | Sassy Buttons are made with love by&nbsp;
+          a(href="https://www.twitter.com/beaucharman", title="Beau on Twitter") Beau Charman
+          | , and are&nbsp;
+          a(href="http://opensource.org/licenses/MIT", title="MIT license") MIT licenesed.
+          |&nbsp;This page was built with Sass and Jade. Hosted on GitHub. Fonts via Google Fonts.
 
-      h2 Basic Buttons
-
-      dl
-        dt
-          button.btn Button
-        dd
-          pre &lt;button class="btn"&gt;Button&lt;button&gt;
-
-      dl
-        dt
-          button.btn.btn--primary Primary Button
-        dd
-          pre class="btn btn--primary"
-
-      dl
-        dt
-          button.btn.btn--danger Danger! Button
-        dd
-          pre class="btn btn--danger"
-
-      dl
-        dt
-          button.btn.btn--success Success Button
-        dd
-          pre class="btn btn--success"
-
-      dl
-        dt
-          button.btn.btn--subtle Subtle Button
-        dd
-          pre class="btn btn--subtle"
-
-      h2 Variations
-
-      dl
-        dt
-          button.btn.btn--danger.btn--small Small Danger! Button
-        dd
-          pre class="btn btn--danger btn--small"
-
-      dl
-        dt
-          button.btn.btn--success.btn--large Large Success Button :D
-        dd
-          pre class="btn btn--success btn--large"
-
-      dl
-        dt
-          button.btn.btn--primary.btn--block Block Level Primary Button
-        dd
-          pre class="btn btn--primary btn--block"
-
-      dl
-        dt
-          a.btn.btn--primary An anchor styled like a button
-        dd
-          pre &lt;a href="#" class="btn btn--primary btn--block"&gt;
-
-      dl
-        dt
-          button.btn.btn--hotstuff Hot Stuff!
-        dd
-          pre .btn--hotstuff
-
-      dl
-        dt
-          button.btn.btn--primary Confirm
-          button.btn.btn--subtle Cancel
-          button.btn.btn--success Save
-          button.btn.btn--danger Delete
-        dd
