@@ -6,9 +6,11 @@
 
 1. Download and import `_sassy-buttons.scss` into your Sass directory.
 2. Use the `sassy-button()` mixin function to render the CSS necessary for each button style. For example:
+
 ```css
 @include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);
 ```
+
 3. Make, and enjoy a pot of tea.
 
 ### Mixin parameter descriptions
