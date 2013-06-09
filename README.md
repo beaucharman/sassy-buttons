@@ -1,6 +1,6 @@
 # Sassy Buttons!
 
-> Some styles and functions to help quickly create nice buttons, with Sass ;)
+> Some clean styles and thoughtful Sass mixins that create sexy and semantic CSS button objects.
 
 ## Usage
 
