@@ -63,7 +63,9 @@
   //
   // Initial state
   //
-  #{$selector} {
+  #{$selector},
+  #{$selector}:link,
+  #{$selector}:visited {
     color: $foreground-color;
     border-color: darken($background-color, 1%);
     border-bottom-color: darken($background-color, 10%);

@@ -37,7 +37,9 @@
   width: 100%;
   display: block; }
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited {
   color: #444444;
   border-color: #c9c9c9;
   border-bottom-color: #b3b3b3;
@@ -83,7 +85,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFCCCCCC', GradientType=0); }
 
-.btn--primary {
+.btn--primary,
+.btn--primary:link,
+.btn--primary:visited {
   color: white;
   border-color: #657ec4;
   border-bottom-color: #4663b5;
@@ -129,7 +133,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA0AFDA', endColorstr='#FF6981C5', GradientType=0); }
 
-.btn--danger {
+.btn--danger,
+.btn--danger:link,
+.btn--danger:visited {
   color: white;
   border-color: #d75047;
   border-bottom-color: #c5352b;
@@ -175,7 +181,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE6908A', endColorstr='#FFD8544B', GradientType=0); }
 
-.btn--success {
+.btn--success,
+.btn--success:link,
+.btn--success:visited {
   color: white;
   border-color: #79bc51;
   border-bottom-color: #63a13e;
@@ -221,7 +229,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA6D28C', endColorstr='#FF7CBD55', GradientType=0); }
 
-.btn--noir {
+.btn--noir,
+.btn--noir:link,
+.btn--noir:visited {
   color: white;
   border-color: #1f1f1f;
   border-bottom-color: #090909;
@@ -267,7 +277,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF484848', endColorstr='#FF222222', GradientType=0); }
 
-.btn--custom-color {
+.btn--custom-color,
+.btn--custom-color:link,
+.btn--custom-color:visited {
   color: white;
   border-color: #0f8566;
   border-bottom-color: #0b5c46;
@@ -313,7 +325,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF18CF9D', endColorstr='#FF108A69', GradientType=0); }
 
-.btn--high-contrast {
+.btn--high-contrast,
+.btn--high-contrast:link,
+.btn--high-contrast:visited {
   color: white;
   border-color: #ebab00;
   border-bottom-color: #bd8a00;
@@ -360,7 +374,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFCB3E', endColorstr='#FFF0AF00', GradientType=0); }
 
-.btn--inverted {
+.btn--inverted,
+.btn--inverted:link,
+.btn--inverted:visited {
   color: black;
   border-color: #9dbff9;
   border-bottom-color: #72a3f6;
