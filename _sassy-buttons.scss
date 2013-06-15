@@ -47,7 +47,7 @@
 // @param {boolean} $high-contrast | use true or false
 // Dependancies: gradient-vertical()
 // ======================================================================== /
-@mixin sassy-button($handle: subtle, $background-color: #ccc, $foreground-color: #444, $inverted: false, $high-contrast: false) {
+@mixin sassy-button($handle: subtle, $background-color: #ccc, $foreground-color: #111, $inverted: false, $high-contrast: false) {
 
   //
   // Set up selectors for each button

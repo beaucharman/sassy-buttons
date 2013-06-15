@@ -40,7 +40,7 @@
 .btn,
 .btn:link,
 .btn:visited {
-  color: #444444;
+  color: #111111;
   border-color: #c9c9c9;
   border-bottom-color: #b3b3b3;
   background-color: #cccccc;
@@ -54,7 +54,7 @@
   text-shadow: 0 1px 0 #fafafa; }
 
 .btn:hover {
-  color: #3c3c3c;
+  color: #090909;
   border-color: #b8b8b8;
   background-color: #e0e0e0;
   background-image: -moz-linear-gradient(top, #fafafa, #e0e0e0);
