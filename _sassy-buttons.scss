@@ -103,13 +103,6 @@
       @include gradient-vertical(darken($background-color, 3%), darken($background-color, 1%));
     }
   }
-
-  //
-  // Inactive
-  //
-  #{$selector}--inactive {
-    @include gradient-vertical(lighten($background-color, 15%), $background-color);
-  }
 }
 
 // Styles
