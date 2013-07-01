@@ -1,3 +1,156 @@
-<!DOCTYPE html><html><head><title>Sassy Buttons</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><link href="http://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet" type="text/css"><link rel="stylesheet" href="assets/stylesheets/normalize.css"><link rel="stylesheet" href="assets/stylesheets/main.css?v=0.1"><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--></head><body><div class="page-wrap"><header class="page-header"><h1>Sassy Buttons!!</h1><h6>A thing by&nbsp;<a href="https://twitter.com/beaucharman" title="Beau on Twitter">@beaucharman</a></h6><p>Some clean styles and thoughtful Sass mixins that create sexy and semantic CSS button objects.</p><p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--primary btn--block">View Sassy Buttons on GitHub</a></p><p>To create some button objects, conduct the following tasks:</p><ol><li>Download and import &nbsp;<code>_sassy-buttons.scss</code>&nbsp;into your main Sass directory.</li><li>Use the&nbsp;<code>sassy-button()</code>&nbsp;mixin to render the CSS necessary for each button style. For example:<pre>@include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);</pre>&nbsp;Which could look something like:<pre>@include sassy-button(primary, #6981c5, #fff, false, false);</pre></li><li>Make, and enjoy a pot of tea.</li></ol></header><section><h2>Basic Buttons</h2><dl><dt><button class="btn">Button</button></dt><dd><pre>&lt;button class="btn"&gt;Button&lt;button&gt;</pre></dd></dl><dl><dt><button class="btn btn--primary">Primary Button</button></dt><dd><pre>class="btn btn--primary"</pre></dd></dl><dl><dt><button class="btn btn--danger">Danger! Button</button></dt><dd><pre>class="btn btn--danger"</pre></dd></dl><dl><dt><button class="btn btn--success">Success Button</button></dt><dd><pre>class="btn btn--success"</pre></dd></dl><dl><dt><button class="btn btn--noir">Noir Button</button></dt><dd><pre>class="btn btn--noir"</pre></dd></dl></section><section><h2>Variations</h2><dl><dt><button class="btn btn--danger btn--small">Small Danger! Button</button></dt><dd><pre>class="btn btn--danger btn--small"</pre></dd></dl><dl><dt><button class="btn btn--success btn--large">Large Success Button :D</button></dt><dd><pre>class="btn btn--success btn--large"</pre></dd></dl><dl><dt><button class="btn btn--narrow">Narrow button</button></dt><dd><pre>class="btn btn--narrow"</pre></dd></dl><dl><dt><button class="btn btn--primary btn--block">Block Level Primary Button</button></dt><dd><pre>class="btn btn--primary btn--block"</pre></dd></dl><dl><dt><a class="btn">An anchor styled like a button</a></dt><dd><pre>&lt;a href="#" class="btn"&gt;</pre></dd></dl><dl><dt><button class="btn btn--custom-color">Custom colours!</button></dt><dd><pre>.btn.btn--custom-color</pre><pre>@include sassy-button(custom-color, #6fb49d, #fff);</pre></dd></dl><dl><dt><button class="btn btn--inverted">Inverted colours</button><p>Dark text on a light background,
-so we alter the text-shadow color and direction
-to stay consistent with the light source (top to bottom)</p></dt><dd><pre>.btn.btn--inverted</pre><pre>@include sassy-button(inverted, #a2c2f9, #000, <strong>true</strong>);</pre></dd></dl><dl><dt><button class="btn btn--high-contrast">High contrast user feedback</button></dt><dd><pre>.btn.btn--high-contrast</pre><pre>@include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);</pre></dd></dl></section><p>Thank you for stopping by :)&nbsp;<a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--small">View this project on github &rarr;</a></p><footer class="page-footer"><p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub">Sassy Buttons</a>&nbsp;is made with love by&nbsp;<a href="https://www.twitter.com/beaucharman" title="Beau on Twitter">Beau Charman</a>&nbsp;(and Sass), and is&nbsp;<a href="http://opensource.org/licenses/MIT" title="MIT license">MIT licenesed.</a>&nbsp;This page was built with&nbsp;<a href="http://sass-lang.com/" title="Sass">Sass</a>&nbsp;and&nbsp;<a href="https://github.com/visionmedia/jade" title="Jade">Jade</a>. Hosted on&nbsp;<a href="https://www.github.com" title="GitHub">GitHub</a>. Fonts via&nbsp;<a href="http://www.google.com/fonts/specimen/Mouse+Memoirs" title="Google Fonts">Google Fonts</a>.</p></footer></div></body></html><a href="https://github.com/beaucharman/sassy-buttons"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sassy Buttons</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link href="http://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css?v=0.1"><!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="page-header">
+        <h1>Sassy Buttons!!</h1>
+        <h6>A thing by&nbsp;<a href="https://twitter.com/beaucharman" title="Beau on Twitter">@beaucharman</a></h6>
+        <p>Some clean styles and thoughtful Sass mixins that create sexy and semantic CSS button objects.</p>
+        <p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--primary btn--block">View Sassy Buttons on GitHub</a></p>
+        <p>To create some button objects, conduct the following tasks:</p>
+        <ol>
+          <li>Download and import &nbsp;<code>_sassy-buttons.scss</code>&nbsp;into your main Sass directory.</li>
+          <li>Use the&nbsp;<code>sassy-button()</code>&nbsp;mixin to render the CSS necessary for each button style. For example:
+            <pre>@include sassy-button($label, $background-color, $foreground-color, $inverted, $high-contrast);</pre>&nbsp;Which could look something like:
+            <pre>@include sassy-button(primary, #6981c5, #fff, false, false);</pre>
+          </li>
+          <li>Make, and enjoy a pot of tea.</li>
+        </ol>
+      </header>
+      <section>
+        <h2>Basic Buttons</h2>
+        <dl>
+          <dt>
+            <button class="btn">Button</button>
+          </dt>
+          <dd>
+            <pre>&lt;button class="btn"&gt;Button&lt;button&gt;</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--primary">Primary Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--primary"</pre>
+            <pre>@include sassy-button(primary, #6981c5, #fff);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--danger">Danger! Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--danger"</pre>
+            <pre>@include sassy-button(danger, #d8544b, #fff);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--success">Success Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--success"</pre>
+            <pre>@include sassy-button(success, #69a844, #fff);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--noir">Noir Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--noir"</pre>
+            <pre>@include sassy-button(noir, #222, #fff);</pre>
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Variations</h2>
+        <dl>
+          <dt>
+            <button class="btn btn--danger btn--small">Small Danger! Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--danger btn--small"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--success btn--large">Large Success Button :D</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--success btn--large"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--narrow">Narrow button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--narrow"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--primary btn--block">Block Level Primary Button</button>
+          </dt>
+          <dd>
+            <pre>class="btn btn--primary btn--block"</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt><a class="btn">An anchor styled like a button</a></dt>
+          <dd>
+            <pre>&lt;a href="#" class="btn"&gt;</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--custom-color">Custom colours!</button>
+          </dt>
+          <dd>
+            <pre>.btn.btn--custom-color</pre>
+            <pre>@include sassy-button(custom-color, #6fb49d, #fff);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--inverted">Inverted colours</button>
+            <p>
+              Dark text on a light background,
+              so we alter the text-shadow color and direction
+              to stay consistent with the light source (top to bottom)
+            </p>
+          </dt>
+          <dd>
+            <pre>.btn.btn--inverted</pre>
+            <pre>@include sassy-button(inverted, #a2c2f9, #000, <strong>true</strong>);</pre>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <button class="btn btn--high-contrast">High contrast user feedback</button>
+          </dt>
+          <dd>
+            <pre>.btn.btn--high-contrast</pre>
+            <pre>@include sassy-button(high-contrast, #f0af00, #fff, false, <strong>true</strong>);</pre>
+          </dd>
+        </dl>
+      </section>
+      <p>Thank you for stopping by :)&nbsp;<a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub" class="btn btn--small">View this project on github &rarr;</a></p>
+      <footer class="page-footer">
+        <p><a href="https://github.com/beaucharman/sassy-buttons" title="View this project on GitHub">Sassy Buttons</a>&nbsp;is made with love by&nbsp;<a href="https://www.twitter.com/beaucharman" title="Beau on Twitter">Beau Charman</a>&nbsp;(and Sass), and is&nbsp;<a href="http://opensource.org/licenses/MIT" title="MIT license">MIT licenesed.</a>&nbsp;This page was built with&nbsp;<a href="http://sass-lang.com/" title="Sass">Sass</a>&nbsp;and&nbsp;<a href="https://github.com/visionmedia/jade" title="Jade">Jade</a>. Hosted on&nbsp;<a href="https://www.github.com" title="GitHub">GitHub</a>. Fonts via&nbsp;<a href="http://www.google.com/fonts/specimen/Mouse+Memoirs" title="Google Fonts">Google Fonts</a>.</p>
+      </footer>
+    </div><a href="https://github.com/beaucharman/sassy-buttons"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+  </body>
+</html>
