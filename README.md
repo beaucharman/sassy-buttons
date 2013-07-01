@@ -37,7 +37,7 @@ Toggle the foreground and background colors on hover for high contrast user feed
 
 ### Button CSS objects examples
 
-The following `sassy-button()` mixin declarations are good starting points and are the example button CSS ojects on the [project page](http://beaucharman.github.io/sassy-buttons)
+The following `sassy-button()` mixin declarations are good starting points and are the example button CSS ojects on the [project page](http://beaucharman.github.io/sassy-buttons).
 
 ```scss
 //
