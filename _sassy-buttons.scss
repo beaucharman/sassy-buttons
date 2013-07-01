@@ -1,10 +1,10 @@
 //
-// Sassy Buttons
+// Sassified Buttons
 // ========================================================================
-// _sassy_buttons.scss
+// _sassified_buttons.scss
 // @version   2.0 | July 1st 2013
 // @author    Beau Charman | @beaucharman | http://www.beaucharman.me
-// @link      https://github.com/beaucharman/sassy-buttons/
+// @link      https://github.com/beaucharman/sassified-buttons/
 // @license   MIT license
 //
 // For useful mixins: http://getpreboot.com/
@@ -50,7 +50,7 @@
 // @param {boolean} $high-contrast | use true or false
 // Dependancies: gradient-vertical()
 // ======================================================================== /
-@mixin sassy-button($handle: subtle, $background-color: #aaa, $foreground-color: #111, $inverted: false, $high-contrast: false) {
+@mixin sassified-button($handle: subtle, $background-color: #aaa, $foreground-color: #111, $inverted: false, $high-contrast: false) {
 
   //
   // Set up selectors for each button
@@ -153,4 +153,4 @@
 
 // Set up the initial,
 // default button object
-@include sassy-button();
+@include sassified-button();
