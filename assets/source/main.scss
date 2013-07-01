@@ -2,11 +2,11 @@
 // Main
 // ========================================================================
 // main.scss
-// @version 1.0 | Thursday, 6th June 2013
-// @package sass-buttons
-// @author  Beau Charman | @beaucharman | http://www.beaucharman.me
-// @link    https://github.com/beaucharman/sass-buttons
-// @license MIT license
+// @version   1.0 | Thursday, 6th June 2013
+// @package   sass-buttons
+// @author    Beau Charman | @beaucharman | http://www.beaucharman.me
+// @link      https://github.com/beaucharman/sass-buttons
+// @license    MIT license
 //
 // For useful mixins: http://getpreboot.com/
 // ======================================================================== /
@@ -62,7 +62,7 @@ $medium: 780px;
 @include sassy-button(danger, #d8544b, #fff);
 
 // Success button
-@include sassy-button(success, #7cbd55, #fff);
+@include sassy-button(success, #69a844, #fff);
 
 // Noir button
 @include sassy-button(noir, #222, #fff);

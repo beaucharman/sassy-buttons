@@ -2,12 +2,16 @@
 // Sassy Buttons
 // ========================================================================
 // _sassy_buttons.scss
-// @version   1.0 | Saturday, June 8th 2013
+// @version   2.0 | July 1st 2013
 // @author    Beau Charman | @beaucharman | http://www.beaucharman.me
-// @link      https://github.com/beaucharman/
+// @link      https://github.com/beaucharman/sassy-buttons/
 // @license   MIT license
 //
 // For useful mixins: http://getpreboot.com/
+//
+// If you are not using Preboot, or any other mixing library, make sure to
+// include the bellow gradient-vertical() mixin and %border-box-sizing extend,
+// otherwise you can delete them :)
 // ======================================================================== /
 
 // Gradient Vertical
@@ -46,15 +50,15 @@
 // @param {boolean} $high-contrast | use true or false
 // Dependancies: gradient-vertical()
 // ======================================================================== /
-@mixin sassy-button($handle: subtle, $background-color: #ccc, $foreground-color: #111, $inverted: false, $high-contrast: false) {
+@mixin sassy-button($handle: subtle, $background-color: #aaa, $foreground-color: #111, $inverted: false, $high-contrast: false) {
 
   //
   // Set up selectors for each button
   //
   $defualt: subtle;
-  $selector: '.btn';
+  $selector: ".btn";
   @if($handle != $defualt) {
-    $selector: '.btn--#{$handle}';
+    $selector: ".btn--#{$handle}";
   } @else {
     $inverted: true;
   }
@@ -68,7 +72,7 @@
     color: $foreground-color;
     border-color: darken($background-color, 1%);
     border-bottom-color: darken($background-color, 10%);
-    @include gradient-vertical(lighten($background-color, 12%), $background-color);
+    @include gradient-vertical(lighten($background-color, 10%), $background-color);
     @if($inverted == true) {
       text-shadow: 0 1px 0 lighten($background-color, 18%);
     } @else {
@@ -83,12 +87,10 @@
     @if($high-contrast == true) {
       text-shadow: none;
       color: darken($background-color, 3%);
-      border-color: darken($foreground-color, 8%);
-      @include gradient-vertical(lighten($foreground-color, 18%), lighten($foreground-color, 8%));
+      @include gradient-vertical(darken($foreground-color, 6%), $foreground-color);
     } @else {
-      color: darken($foreground-color, 3%);
       border-color: darken($background-color, 8%);
-      @include gradient-vertical(lighten($background-color, 18%), lighten($background-color, 8%));
+      @include gradient-vertical(darken($background-color, 12%), darken($background-color, 4%));
     }
   }
 
@@ -99,38 +101,37 @@
     @if($high-contrast == true) {
       @include gradient-vertical(darken($foreground-color, 15%), darken($foreground-color, 13%));
     } @else {
-      @include gradient-vertical(darken($background-color, 3%), darken($background-color, 1%));
+      @include gradient-vertical(lighten($background-color, 2%), $background-color);
     }
   }
 }
 
+//
 // Styles
 // ======================================================================== /
 
 // Base styling
 .btn {
-  background-image: none;
-  background-color: transparent;
-  border: 1px solid;
+  @extend %border-box-sizing;
+  display: inline-block;
+  padding: 0.4em 1.25em;
+  margin: 0;
   font-size: 1em;
   font-family: sans-serif;
-  padding: 0.5em 1.5em;
-  margin: 0;
-  cursor: pointer;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-align: center;
-  font-weight: 400;
-  border-radius: 3px;
   line-height: 1.4;
+  font-weight: 400;
+  text-align: center;
   text-decoration: none;
-  @extend %border-box-sizing;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: default;
 }
 
 // Various states and apparences
 .btn:active {
   box-shadow: inset 0 1px 8px -2px #000;
-  text-shadow: 0 0 8px #fff !important;
 }
 
 .btn--large {
@@ -146,10 +147,10 @@
 }
 
 .btn--block {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
-// Set up the initial
+// Set up the initial,
 // default button object
 @include sassy-button();
