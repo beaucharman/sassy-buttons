@@ -35,7 +35,7 @@ Awesome for aiding with the illusion of light source, alternating the placement 
 
 Toggle the foreground and background colors on hover for high contrast user feedback.
 
-### Button CSS objects examples
+### Button CSS object examples
 
 The following `sassy-button()` mixin declarations are good starting points and are the example button CSS ojects on the [project page](http://beaucharman.github.io/sassy-buttons).
 
