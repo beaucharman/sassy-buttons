@@ -65,3 +65,7 @@ The following `sassy-button()` mixin declarations are good starting points and a
 // Inverted button
 @include sassy-button(inverted, #a2c2f9, #000, true);
 ```
+
+### Issues, questions?
+
+https://github.com/beaucharman/sassy-buttons/issues
